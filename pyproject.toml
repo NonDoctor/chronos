@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "chronos"
+version = "0.1.0"
+description = "Async Scheduler"
+authors = ["NonDoctor <tsucintosh@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiosqlite = "^0.20.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
