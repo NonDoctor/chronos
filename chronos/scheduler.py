@@ -34,7 +34,6 @@ class Scheduler:
             # Save the task to storage if specified
             if save:
                 await self.storage.save_task(task)
-
             # Calculate the time to wait before executing the task
             pause = task.next_run - time()
             if pause > 0:
@@ -66,7 +65,7 @@ class Scheduler:
             # Log any exceptions during task execution
             logger.error(f"Task {task.id} failed: {e}")
 
-    async def add_task(self, task: Task):
+    def add_task(self, task: Task):
         """
         Adds a task to the scheduler and starts its execution.
 

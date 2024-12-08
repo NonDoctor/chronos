@@ -43,3 +43,7 @@ class Task:
             self.next_run += self.interval_seconds
             return True
         return False
+
+    def __repr__(self):
+        """Return a string representation of the Task object."""
+        return f"Task(id={self.id}, function={self.function.__name__}, params={self.params}, next_run={self.next_run}, interval_seconds={self.interval_seconds}, run_missed={self.run_missed})"
